@@ -24,7 +24,9 @@ let app = new Vue({
             name:'June vue',
             email:'user123@gmail.com'
         },
-        counter:0
+        counter:0,
+        message:'Select a user',
+        users:[ {name:'User'}, {name:'Admin'} ]
     },
     methods:{
         addCounter:function(){
@@ -32,6 +34,9 @@ let app = new Vue({
         },
         subCounter:function(){
             this.counter -= 1
+        },
+        sayHi(name){
+            this.message = 'Hi, ' + name
         }
     }
 });
