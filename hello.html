@@ -21,6 +21,10 @@
         <div v-for="todo in todos">
             <p>{{todo.text}}</p>
         </div>
+
+        <div v-for="(todo, index) in todos">
+            <p>{{index}}::{{todo.text}}</p>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
