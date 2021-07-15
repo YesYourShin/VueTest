@@ -25,5 +25,10 @@ let app = new Vue({
             email:'user123@gmail.com'
         },
         counter:0
+    },
+    methods:{
+        addCounter:function(){
+            this.counter += 1
+        }
     }
 });
