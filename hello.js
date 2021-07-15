@@ -29,6 +29,9 @@ let app = new Vue({
     methods:{
         addCounter:function(){
             this.counter += 1
+        },
+        subCounter:function(){
+            this.counter -= 1
         }
     }
 });
