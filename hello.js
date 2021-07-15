@@ -23,6 +23,7 @@ let app = new Vue({
             userid:'user123',
             name:'June vue',
             email:'user123@gmail.com'
-        }
+        },
+        counter:0
     }
 });

@@ -10,25 +10,39 @@
     <div id="app">
         <a v-bind:href='address'>Naver</a>
         
+        <p>v-if, v-else-if, v-else: DOM 조건문</p>
         <p v-if="age>=20">Adult</p>
         <p v-else-if="age<20 && age > 12">Teen ager</p>
         <p v-else>Kid</p>
         
+        <p>반복문 for-each의 구조: li에 사용</p>
         <ul>
             <li v-for="todo in todos">{{todo.text}}</li>
         </ul>
 
+        <p>반복문 for-each의 구조: div에 사용</p>
         <div v-for="todo in todos">
             <p>{{todo.text}}</p>
         </div>
 
+        <p>반복문 for-each의 구조: index 받기</p>
         <div v-for="(todo, index) in todos">
             <p>{{index}}::{{todo.text}}</p>
         </div>
 
+        <p>반복문 for-each의 구조: object의 값들 출력하기</p>
         <div v-for="(value, name) in user">
             <p>{{name}} - {{value}}</p>
         </div>
+
+        <p>반복문 for-each의 구조: range for</p>
+        <div v-for="n in 10">
+            <p>{{n}}</p>
+        </div>
+
+        <p>Event Handling</p>
+        <button v-on:click="counter+=1">+</button>
+        <p>{{counter}}</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
