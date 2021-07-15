@@ -1,4 +1,4 @@
-let app = new Vue({
+let title = new Vue({
     el:'#title',
     data: {
         message: {
@@ -9,9 +9,10 @@ let app = new Vue({
     }
 });
 
-let address = new Vue({
+let app = new Vue({
     el:'#app',
     data: {
-        address:'https://www.naver.com'
+        address:'https://www.naver.com',
+        age:20
     }
 });

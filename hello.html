@@ -9,6 +9,9 @@
     </div>
     <div id="app">
         <a v-bind:href='address'>Naver</a>
+        <p v-if="age>=20">Adult</p>
+        <p v-else-if="age<20 && age > 12">Teen ager</p>
+        <p v-else>Kid</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
