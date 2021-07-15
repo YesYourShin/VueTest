@@ -26,7 +26,12 @@ let app = new Vue({
         },
         counter:0,
         message:'Select a user',
-        users:[ {name:'User'}, {name:'Admin'} ]
+        users:[ {name:'User'}, {name:'Admin'} ],
+        comment:'',
+        value:false,
+        values:[],
+        value2:'hello',
+        value3:'hello'
     },
     methods:{
         addCounter:function(){

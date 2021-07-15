@@ -57,8 +57,38 @@
         <ul>
             <li v-for="user in users">
                 <p v-on:click="sayHi(user.name)">{{user.name}}</p>
+                <!-- <p @:click="sayHi(user.name)">{{user.name}}</p> -->
             </li>
         </ul>
+
+        <p>Event Handling 데이터와 view의 양방향 모델링</p>
+        <input v-model="comment">
+        <p>{{comment}}</p>
+
+        <p>Form input binding textarea</p>
+        <span>여러 줄을 가지는 메세지:</span>
+        <p style="white-space: pre-line">{{ comment }}</p><br>
+        <textarea v-model="comment" placeholder="여러줄을 입력해보세요"></textarea>
+
+        <p>Form input binding checkbox: 단일 값은 boolean으로, 여러 개의 값은 배열로 처리</p>
+        <input type="checkbox" id="checkbox_single" v-model="value">
+        <label for="checkbox_single">{{ value }}</label>
+        <div>
+            <input type="checkbox" id="checkbox_one" value="one" v-model="values">
+            <label for="checkbox_one">one</label>
+            <input type="checkbox" id="checkbox_two" value="two" v-model="values">
+            <label for="checkbox_two">two</label>
+            <input type="checkbox" id="checkbox_three" value="three" v-model="values">
+            <label for="checkbox_three">three</label>
+            <p>Checked: {{ values }}</p>
+        </div>
+
+        <p>Form input binding v-modle.lazy: 각 입력에 동기화 하는 것이 아니라 값이 수정 된 다음 동기화</p>
+        <input v-model.lazy='value2'>
+        <p>{{value2}}</p>
+        <input v-model='value3'>
+        <p>{{value3}}</p>
+
 
     </div>
 
