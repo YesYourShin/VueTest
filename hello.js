@@ -19,5 +19,10 @@ let app = new Vue({
             {text:'Vue 배우기'},
             {text:'멋진 것 만들기'}
         ],
+        user:{
+            userid:'user123',
+            name:'June vue',
+            email:'user123@gmail.com'
+        }
     }
 });
