@@ -5,5 +5,13 @@ let app = new Vue({
             greetings:'Hello',
             name:'user!'
         }
+        
+    }
+});
+
+let address = new Vue({
+    el:'#app',
+    data: {
+        address:'https://www.naver.com'
     }
 });
