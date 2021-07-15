@@ -1,6 +1,9 @@
 let app = new Vue({
     el:'#title',
     data: {
-        message:'Hello'
+        message: {
+            greetings:'Hello',
+            name:'user!'
+        }
     }
 });
