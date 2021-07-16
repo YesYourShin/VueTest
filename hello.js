@@ -17,6 +17,18 @@ Vue.component('hello', {
     }
 })
 
+Vue.component('add', {
+    template:'<button @click="add">{{count}}</button>',
+    data(){
+        return {count:0}
+    },
+    methods:{
+        add(){
+            this.count += 1
+        }
+    }
+})
+
 let app = new Vue({
     el:'#app',
     data: {
@@ -41,7 +53,8 @@ let app = new Vue({
         value2:'hello',
         value3:'hello',
         user_id:'user123',
-        user_grade:'Silver'
+        user_grade:'Silver',
+        totalCount:0
     },
     methods:{
         addCounter:function(){
@@ -68,7 +81,8 @@ let app = new Vue({
         'local-hello':{
             template:'<p>This is local component<p>'
         }
-    }
+    },
+    
 
     
 });
