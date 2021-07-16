@@ -63,6 +63,11 @@ let app = new Vue({
             if(this.age < 20) str ='Not Adult'
             return str
         }
+    },
+    components:{
+        'local-hello':{
+            template:'<p>This is local component<p>'
+        }
     }
 
     
