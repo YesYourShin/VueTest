@@ -20,11 +20,12 @@ Vue.component('hello', {
 Vue.component('add', {
     template:'<button @click="add">{{count}}</button>',
     data(){
-        return {count:0}
+        return {count:1}
     },
     methods:{
         add(){
-            this.count += 1
+            this.count += 1;
+            this.$emit('event-add', 1);
         }
     }
 })
@@ -65,6 +66,9 @@ let app = new Vue({
         },
         sayHi(name){
             this.message = 'Hi, ' + name
+        },
+        updateTotal(count){
+            this.totalCount += count
         }
     },
     computed:{
