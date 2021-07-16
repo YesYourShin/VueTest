@@ -31,7 +31,9 @@ let app = new Vue({
         value:false,
         values:[],
         value2:'hello',
-        value3:'hello'
+        value3:'hello',
+        user_id:'user123',
+        user_grade:'Silver'
     },
     methods:{
         addCounter:function(){
@@ -42,6 +44,11 @@ let app = new Vue({
         },
         sayHi(name){
             this.message = 'Hi, ' + name
+        }
+    },
+    computed:{
+        user_info:function() {
+            return this.user_id+'('+this.user_grade+')'
         }
     }
 });
