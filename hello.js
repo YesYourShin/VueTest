@@ -49,6 +49,11 @@ let app = new Vue({
     computed:{
         user_info:function() {
             return this.user_id+'('+this.user_grade+')'
+        },
+        age_message:function() {
+            let str='Adult'
+            if(this.age < 20) str ='Not Adult'
+            return str
         }
     }
 });
