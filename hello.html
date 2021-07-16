@@ -13,44 +13,44 @@
         <p>v-if, v-else-if, v-else: DOM 조건문</p>
         <p v-if="age>=20">Adult</p>
         <p v-else-if="age<20 && age > 12">Teen ager</p>
-        <p v-else>Kid</p>
+        <p v-else>Kid</p><br>
         
         <p>반복문 for-each의 구조: li에 사용</p>
         <ul>
             <li v-for="todo in todos">{{todo.text}}</li>
-        </ul>
+        </ul><br>
 
         <p>반복문 for-each의 구조: div에 사용</p>
         <div v-for="todo in todos">
             <p>{{todo.text}}</p>
-        </div>
+        </div><br>
 
         <p>반복문 for-each의 구조: index 받기</p>
         <div v-for="(todo, index) in todos">
             <p>{{index}}::{{todo.text}}</p>
-        </div>
+        </div><br>
 
         <p>반복문 for-each의 구조: object의 값들 출력하기</p>
         <div v-for="(value, name) in user">
             <p>{{name}} - {{value}}</p>
-        </div>
+        </div><br>
 
         <p>반복문 for-each의 구조: range for</p>
         <div v-for="n in 10">
             <p>{{n}}</p>
-        </div>
+        </div><br>
 
         <p>Event Handling</p>
         <button v-on:click="counter+=1">+</button>
-        <p>{{counter}}</p>
+        <p>{{counter}}</p><br>
 
         <p>Event Handling method를 이용한 처리</p>
         <button v-on:click="addCounter">+</button>
-        <p>{{counter}}</p>
+        <p>{{counter}}</p><br>
 
         <p>Event Handling method를 이용한 처리</p>
         <button v-on:click="subCounter">-</button>
-        <p>{{counter}}</p>
+        <p>{{counter}}</p><br>
 
         <p>Event Handling method parameter</p>
         <p>{{message}}</p>
@@ -59,16 +59,16 @@
                 <p v-on:click="sayHi(user.name)">{{user.name}}</p>
                 <!-- <p @:click="sayHi(user.name)">{{user.name}}</p> -->
             </li>
-        </ul>
+        </ul><br>
 
         <p>Event Handling 데이터와 view의 양방향 모델링</p>
         <input v-model="comment">
-        <p>{{comment}}</p>
+        <p>{{comment}}</p><br>
 
         <p>Form input binding textarea</p>
         <span>여러 줄을 가지는 메세지:</span>
-        <p style="white-space: pre-line">{{ comment }}</p><br>
-        <textarea v-model="comment" placeholder="여러줄을 입력해보세요"></textarea>
+        <p style="white-space: pre-line">{{ comment }}</p>
+        <textarea v-model="comment" placeholder="여러줄을 입력해보세요"></textarea><br><br>
 
         <p>Form input binding checkbox: 단일 값은 boolean으로, 여러 개의 값은 배열로 처리</p>
         <input type="checkbox" id="checkbox_single" v-model="value">
@@ -80,29 +80,32 @@
             <label for="checkbox_two">two</label>
             <input type="checkbox" id="checkbox_three" value="three" v-model="values">
             <label for="checkbox_three">three</label>
-            <p>Checked: {{ values }}</p>
+            <p>Checked: {{ values }}</p><br>
         </div>
 
         <p>Form input binding v-modle.lazy: 각 입력에 동기화 하는 것이 아니라 값이 수정 된 다음 동기화</p>
         <input v-model.lazy='value2'>
-        <p>{{value2}}</p>
+        <p>{{value2}}</p><br>
         <input v-model='value3'>
-        <p>{{value3}}</p>
+        <p>{{value3}}</p><br>
 
         <p>Form input binding v-model.number: 사용자 입력이 숫자로 형변환 되도록 설정</p>
         <input v-model.number='age'>
-        <p>{{age}}</p>
+        <p>{{age}}</p><br>
 
         <p>Form input binding v-model.trim: 입력을 trim (문자열 양 끝의 공백을 제거)</p>
         <input v-model.trim='message'>
-        <p>{{message}}</p>
+        <p>{{message}}</p><br>
 
         <p>Computed properties computed property</p>
-        <p>{{user_info}}</p>
+        <p>{{user_info}}</p><br>
 
-        <p>Computed properties computed property test age </p>
-        <p>{{age_message}}</p>
+        <p>Computed properties computed property test age</p>
+        <input v-model.number="age">
+        <p>{{age_message}}</p><br>
 
+        <hello name="user"></hello>
+        <hello name="students"></hello>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
