@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Hello</title>
+    <title>Comment</title>
 </head>
 <body>
     <div id="app">
-
-        <h3>{{totalCount}}</h3>
-        <add @event-add="updateTotal"></add><br>
-        <add @event-add="updateTotal"></add><br>
-        <add @event-add="updateTotal"></add><br>
+        <input type="text" v-model="user">
+        <input type="text" v-model="comment">
+        <button @click="save">Save</button><br>
+        <ul>
+            <li v-for="msg in messages">
+                <p>{{ msg.user }}: {{ msg.comment }}</p>
+            </li>        
+        </ul>
 
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="./hello.js"></script>
+    <script src="./comment.js"></script>
 </body>
 </html>

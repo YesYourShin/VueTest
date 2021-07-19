@@ -1,35 +1,20 @@
-
-Vue.component('add', {
-    template:'<button @click="add">{{save}}</button>',
-    data(){
-        return {save:'save'}
-    },
-    methods:{
-        add(){
-            this.count += 1;
-            this.$emit('save', save);
-        }
-    }
-})
-
 let app = new Vue({
     el:'#app',
     data: {
-        user:{
-            userid:'user123',
-            name:'June vue',
-            email:'user123@gmail.com'
-        },
-
-        totalCount:0
+        user:null,
+        comment:null,
+        messages:[]
     },
     methods:{
-        updateTotal(count){
-            this.totalCount += count
+        save(){
+            const message={
+                user:this.user,
+                comment:this.comment
+            };
+
+            this.messages.unshift(message);
+            this.user=null
+            this.comment=null
         }
-    },
-
-    
-
-    
-});
+    }
+})
